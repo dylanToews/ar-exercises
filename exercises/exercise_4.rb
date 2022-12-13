@@ -19,8 +19,18 @@ class Stores < ActiveRecord::Base
   
   @mens_stores = Stores.where(mens_apparel: true)
 
-  @mens_stores.each do |elem|
-    p elem.name
-  end
+  puts "all mens stores"
+
+    @mens_stores.each do |elem|
+      p elem.name
+    end
+
+    puts "Womens stores selling under 1 million"
+
+  @under_mil_womens = Stores.where("annual_revenue < 1000000").where(womens_apparel: true)
+
+    @under_mil_womens.each do |elem|
+      p elem.name
+    end
 
 end
