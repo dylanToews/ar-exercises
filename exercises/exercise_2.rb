@@ -5,11 +5,12 @@ puts "Exercise 2"
 puts "----------"
 
 
-class Stores < ActiveRecord::Base
 
-@store1 = Stores.find_by(id: 1)
+@store1 = Store.find_by(id: 1)
+@store2 = Store.find_by(id: 2)
+@store3 = Store.find_by(id: 3)
+
 @store1.update(name: "Pickleville")
 
-@store2 = Stores.find_by(id: 1)
 
-end
+

@@ -7,10 +7,11 @@ puts "----------"
 
 # Your code goes here ...
 
-class Stores < ActiveRecord::Base
 
-  @store3 = Stores.find_by(id: 3)
+
+  @store3 = Store.find_by(id: 3)
   @store3.destroy 
 
-  puts Stores.count
-  end
+  puts Store.count
+
+  
